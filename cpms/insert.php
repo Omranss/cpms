@@ -42,6 +42,10 @@
 				$interest3 = mysqli_real_escape_string($db,$_POST['interest3']);   
 			}
 				
+			if($tUsername > 10)
+			{
+				echo "<script>alert('shit')</script>";
+			}
 
 			$sql="insert into users (username,password,role) values ('$tUsername','$tPassword','reviewer')";
 			$sql2="insert into reviewer (username,first_name,middle_name,last_name, Affiliation, University, Department, Address, City, State, Zip_Code, Phone_Number, Email_Address,	interest_1,	interest_2,	interest_3 ) values ( '$tUsername','$tFirstName', '$tMiddleInitials', '$tLastName', '$tAffiliation', '$tUniversity', '$tDepartment', '$tAddress', '$tCity', '$tState', '$tZipCode', '$tPhoneNumber', '$tEmailAddress', '$interest1', '$interest2', '$interest3')";

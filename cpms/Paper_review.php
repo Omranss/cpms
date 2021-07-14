@@ -265,7 +265,7 @@
             <option value="5">Excellent</option> 
             </select></td>
           <td>
-            <input type="text"  placeholder="Comments" name="content_comments"></td>
+            <input type="text"  placeholder="Comments" name="content_comments" maxlength = "255"></td>
         </tr>
       </table>
     
@@ -307,7 +307,7 @@
             <option value="5">Excellent</option> 
             </select></td>
           <td>
-            <input type="text"  placeholder="Comments" name="wd_comments">
+            <input type="text"  placeholder="Comments" name="wd_comments" maxlength = "255">
               
           </td>
         </tr>
@@ -341,7 +341,7 @@
             <option value="5">Excellent</option> 
             </select></td>
           <td>
-            <input type="text"  placeholder="Comments" name="op_comments">
+            <input type="text"  placeholder="Comments" name="op_comments" maxlength = "255">
               
           </td>
         </tr>
@@ -366,7 +366,7 @@
             <option value="5">Definitly Should Accept Paper</option> 
             </select></td>
           <td>
-            <input type="text"  placeholder="Comments" name="comments">
+            <input type="text"  placeholder="Comments" name="comments" maxlength="255">
               
           </td>
         </tr>

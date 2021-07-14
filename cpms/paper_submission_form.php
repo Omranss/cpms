@@ -234,7 +234,7 @@ if(isset($_POST['upload'] )){
       <th>Submit</th>
     </tr>
     <tr><form action="action_page.php" method= "POST" enctype="multipart/form-data">
-      <td><input type="text"  name="p_title" required></td>
+      <td><input type="text"  name="p_title" maxlength = "255" required></td>
       <td><select name="topic"> 
             <option value="Analysis of Algorithms">Analysis of Algorithms</option>
             <option value="Applications">Applications</option>
@@ -272,8 +272,8 @@ if(isset($_POST['upload'] )){
             <option value="Other">Other</option>
           </select></td>
               
-      <td><input type="text" name="comment" required></td>
-      <td><input type="file"  name="uploaded_report" required></td>
+      <td><input type="text" name="comment" maxlength = "255" required></td>
+      <td><input type="file"  name="uploaded_report" pattern=".doc" required></td>
       <td><input type="submit" name ="intial_upload" value="Submit" /></td>
     </form>
   </table>  

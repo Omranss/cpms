@@ -180,18 +180,18 @@
   $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 
   echo '<form name="profile_action"  action="profile_submit.php" method="POST"><table>                                                                                                                            ';
-  echo '<tr><th>First Name</th><td> <input type="text"  			value="'.$row['first_name'].'"	 name="t_first_name" ></td></tr>                     ';
-  echo '<tr><th>Middle Initial</th> <td> <input type="text"  		value="'.$row['middle_name'].'" 				 name="t_middle_initial"></td> </tr> ';
-  echo '<tr><th>Last Name</th><td> <input type="text"  			value="'.$row['last_name'].'"	 name="t_last_name" ></td> </tr>                     ';
-  echo '<tr><th>Affiliation</th><td> <input type="text"  			value="'.$row['Affiliation'].'"		 name="t_Affiliation" ></td> </tr>           ';
-  echo '<tr><th>University</th> <td> <input type="text"  			value="'.$row['University'].'"	 name="t_University" ></td> </tr>                ';
-  echo '<tr><th>Department</th> <td> <input type="text" 			value="'.$row['Department'].'"	 name="t_Department" ></td> </tr>                ';
-  echo '<tr><th>Address</th><td> <input type="text"				value="'.$row['Address'].'"	 name="t_Address" ></td> </tr>                   ';
-  echo '<tr><th>City</th> <td> <input type="text"  				value="'.$row['City'].'"	 name="t_City" ></td> </tr>                          ';
-  echo '<tr><th>State</th><td> <input type="text" 				value="'.$row['State'].'" 	name="t_State" ></td> </tr>                          ';
-  echo '<tr><th>Zip</th><td> <input type="text" 					value="'.$row['Zip_Code'].'" 	name="t_Zip" ></td> </tr>                        ';
-  echo '<tr><th>Phone Number</th> <td> <input type="text" 	value="'.$row['Phone_Number'].'"				 name="t_Phone_Number" ></td> </tr>      ';
-  echo '<tr><th>Email Address</th><td> <input type="text" 			value="'.$row['Email_Address'].'"	 name="t_Email" ></td> </tr>                         ';
+  echo '<tr><th>First Name</th><td> <input type="text" maxlenght = "50" 			value="'.$row['first_name'].'"	 name="t_first_name" ></td></tr>                     ';
+  echo '<tr><th>Middle Initial</th> <td> <input type="text" maxlength="1"  		value="'.$row['middle_name'].'" 				 name="t_middle_initial"></td> </tr> ';
+  echo '<tr><th>Last Name</th><td> <input type="text" maxlenght = "100"  			value="'.$row['last_name'].'"	 name="t_last_name" ></td> </tr>                     ';
+  echo '<tr><th>Affiliation</th><td> <input type="text" pattern="[A-Za-z ]+" maxlength = "50"  			value="'.$row['Affiliation'].'"		 name="t_Affiliation" ></td> </tr>           ';
+  echo '<tr><th>University</th> <td> <input type="text" pattern="[A-Za-z ]+" maxlength = "75"  			value="'.$row['University'].'"	 name="t_University" ></td> </tr>                ';
+  echo '<tr><th>Department</th> <td> <input type="text" pattern="[A-Za-z ]+" maxlength = "75" 			value="'.$row['Department'].'"	 name="t_Department" ></td> </tr>                ';
+  echo '<tr><th>Address</th><td> <input type="text" maxlength = "100"				value="'.$row['Address'].'"	 name="t_Address" ></td> </tr>                   ';
+  echo '<tr><th>City</th> <td> <input type="text" pattern="[A-Za-z ]+" maxlength = "75" 				value="'.$row['City'].'"	 name="t_City" ></td> </tr>                          ';
+  echo '<tr><th>State</th><td> <input type="text" pattern="[A-Za-z ]+" maxlength = "20"				value="'.$row['State'].'" 	name="t_State" ></td> </tr>                          ';
+  echo '<tr><th>Zip</th><td> <input type="text" maxlength = "11" 					value="'.$row['Zip_Code'].'" 	name="t_Zip" ></td> </tr>                        ';
+  echo '<tr><th>Phone Number</th> <td> <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" maxlength = "12" 	value="'.$row['Phone_Number'].'"				 name="t_Phone_Number" ></td> </tr>      ';
+  echo '<tr><th>Email Address</th><td> <input type="email" maxlength = "150" 			value="'.$row['Email_Address'].'"	 name="t_Email" ></td> </tr>                         ';
   echo '</table> ';
   echo '<br><input type="submit" name="profile_btn" value="Submit"></form> ';
 ?>
@@ -200,9 +200,9 @@
 <p>Change password:<br>
 
 <form name="changing_prof_pwd"  action="" method="POST">
-    <input type="text"  placeholder="current password" name="cpwd"><br>
-    <input type="text"  placeholder="enter new password" name="npwd">
-    <input type="text"  placeholder="re-enter new password" name="rnpwd">
+    <input type="password"  placeholder="current password" name="cpwd" pattern="[A-Za-z0-9_@#!]+" maxlength = "20"><br>
+    <input type="password"  placeholder="enter new password" name="npwd" pattern="[A-Za-z0-9_@#!]+" maxlength = "20">
+    <input type="password"  placeholder="re-enter new password" name="rnpwd" pattern="[A-Za-z0-9_@#!]+" maxlength = "20">
     <?php echo '<br>'.$msg; ?>
     <br><input type="submit" name="chg_pwd value="Change Password">
     

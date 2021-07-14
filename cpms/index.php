@@ -136,11 +136,11 @@
 			<table>
                 <tr>
                   <td><label for="username"><form2>Username :</form2></label></td>
-                  <td><input id="Username1" placeholder="Username" type="text" name="l_uname" required/></td>
+                  <td><input id="Username1" placeholder="Username" type="text" name="l_uname" maxlength = "20" required/></td>
                 </tr>
                 <tr>
                   <td><label for="password"><form2>Password :</form2></label></td>
-                  <td><input id="Password1" placeholder="Password" type="password" name="l_pwd" required/></td>
+                  <td><input id="Password1" placeholder="Password" type="password" name="l_pwd" maxlength = "20" required/></td>
                 </tr>
                 <tr>
                   <td><br><input type="submit" class="button" value="Login" /></td>
@@ -156,50 +156,50 @@
           <form name = "sign" method="POST" action = "insert.php">
           <table>
               <tr>
-                <td><label for="username"><form2>Username :</form2></label></td>
-                <td><input name = "tUsername" id="tUsername" placeholder="Username" type="text" required/></td>
+                <td><label for="username"><form2>Username (letters, numbers, _, .):</form2></label></td>
+                <td><input name = "tUsername" id="tUsername" placeholder="Username" type="text" pattern="[A-Za-z0-9_.]+" maxlength = '20' required/></td>
               </tr>
               <tr>
-                <td><label for="password"><form2>Password :</form2></label></td>
-                <td> <input name = "tPassword" id="tPassword" placeholder="Password" type="Password" required/></td>
+                <td><label for="password"><form2>Password (letters, numbers, !, #, @, _):</form2></label></td>
+                <td> <input name = "tPassword" id="tPassword" placeholder="Password" type="Password" pattern="[A-Za-z0-9_@#!]+" maxlength = "20" required/></td>
               </tr>
               <tr>
                 <td><label for="firstname"><form2>First Name :</form2></label></td>
                 <td><input name = "tFirstName" id="tFirstName" placeholder="First Name" type="text" required/></td>
                 <td><label for="middleinitials"><form2>Middle Initials :</form2></label></td>
-                <td><input name = "tMiddleInitials" id="tMiddleInitials" placeholder="Middle Initial" type="text" required/></td>
+                <td><input name = "tMiddleInitials" id="tMiddleInitials" placeholder="Middle Initial" type="text" maxlength = '1' required/></td>
                 <td><label for="lastname"><form2>Last Name :</form2></label></td>
                 <td><input name = "tLastName" id="tLastName" placeholder="Last Name" type="text" /></td>
               </tr>
               <tr>
                 <td><label for="affiliation"><form2>Affiliation :</form2></label></td>
-                <td><input name = "tAffiliation" id="tAffiliation" placeholder="Affiliation" type="text" required/></td>
+                <td><input name = "tAffiliation" id="tAffiliation" placeholder="Affiliation" type="text" pattern="[A-Za-z' ]+" maxlength = "50" required/></td>
               </tr>
               <tr>
                 <td><label for="university"><form2>University :</form2></label></td>
-                <td><input name = "tUniversity" id="tUniversity" placeholder="University" type="text" required/></td>
+                <td><input name = "tUniversity" id="tUniversity" placeholder="University" type="text" pattern="[A-Za-z ']+" maxlength = "75" required/></td>
               </tr>
               <tr>
                 <td><label for="department"><form2>Department :</form2></label></td>
-                <td><input name = "tDepartment" id="tDepartment" placeholder="Department" type="text" required/></td>
+                <td><input name = "tDepartment" id="tDepartment" placeholder="Department" type="text" pattern="[A-Za-z' ]+" maxlength = "75" required/></td>
               </tr>
               <tr>
                 <td><label for="address"><form2>Address :</form2></label></td>
-                <td><input name = "tAddress" id="tAddress" placeholder="Address" type="text" required/></td>
+                <td><input name = "tAddress" id="tAddress" placeholder="Address" type="text" maxlength = "150" required/></td>
                 <td><label for="city"><form2>City :</form2></label></td>
-                <td><input name = "tCity" id="tCity" placeholder="City" type="text" required/></td>
+                <td><input name = "tCity" id="tCity" placeholder="City" type="text" pattern="[A-Za-z ']+" maxlength = "75" required/></td>
                 <td><label for="state"><form2>State :</form2></label></td>
-                <td><input name = "tState" id="tState" placeholder="State" type="text" required/></td>
+                <td><input name = "tState" id="tState" placeholder="State" type="text" pattern="[A-Za-z ]+" maxlength = "20" required/></td>
                 <td><label for="zipcode"><form2>Zip Code :</form2></label></td>
-                <td><input name = "tZipCode" id="tZipCode" placeholder="ZipCode" type="text" required/></td>
+                <td><input name = "tZipCode" id="tZipCode" placeholder="ZipCode" type="text" maxlength = '11' required/></td>
               </tr>
               <tr>
-                <td><label for="phonenumber"><form2>Phone Number :</form2></label></td>
-                <td><input name = "tPhoneNumber" id="tPhoneNumber" placeholder="Phone Number" type="text" required/></td>
+                <td><label for="phonenumber"><form2>Phone Number (e.g. ###-###-####) :</form2></label></td>
+                <td><input name = "tPhoneNumber" id="tPhoneNumber" placeholder="Phone Number" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" maxlength = '12' required/></td>
               </tr>
               <tr>
                 <td><label for="emailaddress"><form2>Email Address :</form2></label></td>
-                <td><input name = "tEmailAddress" id="tEmailAddress" placeholder="Email Address" type="text" required/></td>
+                <td><input name = "tEmailAddress" id="tEmailAddress" placeholder="Email Address" type="email" maxlength = "150" required/></td>
               </tr>
               <tr>
                 <td></td>

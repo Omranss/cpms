@@ -5,7 +5,7 @@
 ?>
 
 <?php
-
+//enable and disable submission/reviews acceptance
 $sub_action = $_POST['sub_action'];
 $rev_action = $_POST['rev_action'];
 $sql_author = "update users set status='Y' where role = 'author'";
